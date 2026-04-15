@@ -8,5 +8,31 @@ function generaEmail() {
 
     emailListElement.innerHTML = '';
 
+    for (let i = 0; i < 10; i++){
+        
+        fetch(apiUrl)
+        .then(function(response){
+            return response.json();
+        })
+
+        .then(function(data){
+            
+            // prendo la mail
+            const email = data.response;
+            
+
+            // creo elemento li
+            const li = document.createElement('li');
+
+            // inserisco la mail
+            li.textContent = email;
+
+            // aggiungo alla lista
+            emailListElement.append(li);
+
+            
+        });
+    }
+
 
 }
