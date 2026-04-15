@@ -36,3 +36,9 @@ function generaEmail() {
 
 
 }
+
+// click sul bottone
+buttonGeneraElement.addEventListener('click', generaEmail);
+
+// generazione autamica all'avvio
+generaEmail();
